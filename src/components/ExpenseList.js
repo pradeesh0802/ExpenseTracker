@@ -6,7 +6,7 @@ const ExpenseList = ({ expenses, deleteExpense }) => {
     <div>
       <h2>Expenses</h2>
       {expenses.length === 0 ? (
-        <p>No expenses added yet.</p>
+        <p style={{textAlign:"center"}}>No expenses added yet.</p>
       ) : (
         <div className="expense-table">
           <div className="expense-table-header">
