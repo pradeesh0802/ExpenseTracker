@@ -1,4 +1,3 @@
-/* General Reset */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -13,7 +12,6 @@ h1, h2 {
   color: #444;
 }
 
-/* Container */
 .container {
   max-width: 900px;
   margin: 20px auto;
@@ -23,7 +21,6 @@ h1, h2 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Form Styling */
 form {
   display: flex;
   flex-wrap: wrap;
@@ -58,7 +55,6 @@ form button:hover {
   background: #0056b3;
 }
 
-/* Expense List */
 .expense-table {
   width: 100%;
   border-radius: 8px;
@@ -114,20 +110,6 @@ button:hover {
   background-color: #c82333;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .expense-table-header,
-  .expense-table-row {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .expense-table-header div,
-  .expense-table-row div {
-    text-align: center;
-  }
-}
-
-/* Expense Summary */
 .expense-summary {
   color: #fff;
   padding: 15px;
@@ -175,28 +157,99 @@ button:hover {
   text-align: right;
 }
 
-/* Add responsive table styling */
 @media (max-width: 768px) {
-  .expense-summary table {
-    font-size: 14px;
+  .container {
+    padding: 15px;
   }
-}
 
-
-/* Responsive Design */
-@media (max-width: 768px) {
   form {
     flex-direction: column;
     gap: 10px;
   }
 
-  li {
-    flex-direction: column;
-    align-items: flex-start;
+  .expense-table-header {
+    grid-template-columns: 1fr 1fr;
   }
 
-  li button {
+  .expense-table-header div,
+  .expense-table-row div {
+    text-align: center;
+  }
+
+  .expense-table-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .expense-summary table {
+    font-size: 14px;
+  }
+
+  .expense-summary table th,
+  .expense-summary table td {
+    padding: 8px 10px;
+  }
+
+  form button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 5px 8px;
+  }
+
+  .expense-table-row {
+    padding: 10px;
+  }
+
+  .expense-table {
     margin-top: 10px;
-    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  h1, h2 {
+    font-size: 20px;
+  }
+
+  .expense-summary {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .expense-summary table th,
+  .expense-summary table td {
+    font-size: 12px;
+  }
+
+  .expense-table-header {
+    grid-template-columns: 1fr;
+  }
+
+  .expense-table-row {
+    grid-template-columns: 1fr;
+  }
+
+  .expense-table-row div {
+    text-align: center;
+  }
+
+  form input,
+  form button {
+    width: 90%;
+  }
+
+  form button {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  button {
+    padding: 8px 12px;
   }
 }
