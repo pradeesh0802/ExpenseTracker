@@ -38,6 +38,9 @@ const App = () => {
     if (expenses.length > 0) {
       localStorage.setItem('expense', JSON.stringify(expenses));
     }
+    else {
+      localStorage.removeItem('expense'); // Remove from localStorage if no expenses
+    }
   }, [expenses]);
 
   const addExpense = (expense) => {
